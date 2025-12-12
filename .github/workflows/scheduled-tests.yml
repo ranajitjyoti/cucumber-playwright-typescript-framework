@@ -1,0 +1,40 @@
+name: Scheduled Tests
+
+on:
+  schedule:
+    - cron: '0 9 * * 1-5'  # Run at 9 AM UTC, Monday to Friday
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm install
+    
+    - name: Install Playwright browsers
+      run: npm run setup
+    
+    - name: Run all tests
+      run: npm test
+    
+    - name: Generate HTML report
+      if: always()
+      run: npm run html-report
+    
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: scheduled-test-results
+        path: results/
+        retention-days: 7

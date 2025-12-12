@@ -1,0 +1,42 @@
+{
+  "name": "cucumber-playwright-typescript-framework",
+  "version": "1.0.0",
+  "description": "A comprehensive test automation framework built with Playwright, Cucumber BDD, and TypeScript",
+  "author": "Ranajit Jyoti <ranajitjyoti@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ranajitjyoti/cucumber-playwright-typescript-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ranajitjyoti/cucumber-playwright-typescript-framework/issues"
+  },
+  "homepage": "https://github.com/ranajitjyoti/cucumber-playwright-typescript-framework#readme",
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "bdd",
+    "typescript",
+    "automation",
+    "testing",
+    "e2e",
+    "page-object-model"
+  ],
+  "scripts": {
+    "setup": "npx playwright install chromium",
+    "test": "cucumber-js",
+    "test:ci": "cucumber-js --format json:results/cucumber-report/cucumber-report.json",
+    "results": "node utils/ReportViewer.js",
+    "html-report": "node utils/HtmlReportGenerator.js",
+    "test-with-html": "cucumber-js && node utils/HtmlReportGenerator.js"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.0.0",
+    "@playwright/test": "^1.40.0",
+    "allure-commandline": "^2.36.0",
+    "allure-cucumberjs": "^3.4.3",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0",
+    "cucumber-html-reporter": "^7.1.1"
+  }
+}

@@ -18,9 +18,3 @@ Feature: Smart Watch Audio Page
     Given I navigate to Xiaomi
     When I click on Smart Watch Audio
     And I wait for 5 seconds
-
-  @smoke @smart-watch-audio4
-  Scenario: Navigate to Smart Watch Audio section2
-    Given I navigate to Xiaomi
-    When I click on Smart Watch Audio
-    And I wait for 5 seconds

@@ -29,3 +29,9 @@ Feature: Phones Page
     Given I navigate to Xiaomi
     When I click on Phones
     And I wait for 5 seconds
+
+          @smoke @phones
+  Scenario: Navigate to Phones section3
+    Given I navigate to Xiaomi
+    When I click on Phones
+    And I wait for 5 seconds

@@ -11,7 +11,7 @@ Feature: Buy Journey
    And I wait for 5 seconds
 
   
-  @smoke @buy-journey @regression
+  @smoke @buy-journey @regression @DailyRegression
   Scenario: Complete buy journey2
     Given I navigate to Xiaomi
     When I select a product

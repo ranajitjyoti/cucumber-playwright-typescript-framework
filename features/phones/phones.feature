@@ -1,6 +1,6 @@
 Feature: Phones Page
   
-  @smoke @phones
+  @smoke @phones  @regression
   Scenario: Navigate to Phones section
     Given I navigate to Xiaomi
     When I click on Phones

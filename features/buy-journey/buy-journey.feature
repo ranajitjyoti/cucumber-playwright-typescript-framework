@@ -1,6 +1,6 @@
 Feature: Buy Journey
   
-  @smoke @buy-journey @regression
+  @smoke @buy-journey @regression @dailyRegression
   Scenario: Complete buy journey
     Given I navigate to Xiaomi
     When I select a product

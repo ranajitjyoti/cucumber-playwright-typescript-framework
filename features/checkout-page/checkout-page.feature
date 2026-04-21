@@ -8,7 +8,7 @@ Feature: Checkout Page
     And I select payment method
     And I wait for 5 seconds
 
-      @smoke @checkout @regression
+      @smoke @checkout @regression @DailyRegression
   Scenario: Complete checkout process2
     Given I navigate to Xiaomi
     When I reach checkout page

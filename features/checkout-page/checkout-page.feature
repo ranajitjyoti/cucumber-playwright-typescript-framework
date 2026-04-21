@@ -1,6 +1,6 @@
 Feature: Checkout Page
   
-  @smoke @checkout
+  @smoke @checkout @regression
   Scenario: Complete checkout process
     Given I navigate to Xiaomi
     When I reach checkout page

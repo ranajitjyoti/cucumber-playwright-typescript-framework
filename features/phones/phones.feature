@@ -6,7 +6,7 @@ Feature: Phones Page
     When I click on Phones
     And I wait for 5 seconds
     
-  @smoke @phones
+  @smoke @phones @regression
   Scenario: Navigate to Phones section1
     Given I navigate to Xiaomi
     When I click on Phones
